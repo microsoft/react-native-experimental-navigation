@@ -1,0 +1,16 @@
+{
+  "name": "react-native-experimental-navigation",
+  "version": "1.0.0",
+  "description": "ReactNative experimental navigation extracted from react-native repository.",
+  "main": "index.js",
+  "typings": "typings/react-native-experimental-navigation.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "navigation"
+  ],
+  "author": "Sergei Dryganets",
+  "license": "BSD-3-Clause"
+}
