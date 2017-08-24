@@ -18,7 +18,7 @@ import {
   NavigationRoute,
   NavigationScene,
   NavigationState,
-} from 'NavigationTypeDefinition';
+} from '../NavigationTypeDefinition';
 
 const SCENE_KEY_PREFIX = 'scene_';
 

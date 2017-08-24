@@ -57,7 +57,7 @@ import {
   NavigationAnimatedValue,
   NavigationCustomTransitionConfig,
   NavigationPanHandlerProps,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 import type {
   NavigationGestureDirection,

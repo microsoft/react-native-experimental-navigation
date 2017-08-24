@@ -1,6 +1,6 @@
 {
   "name": "reactxp-experimental-navigation",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ReactNative experimental navigation extracted from react-native repository.",
   "main": "index.js",
   "typings": "typings/reactxp-experimental-navigation.d.ts",

@@ -50,7 +50,7 @@ import {
   NavigationPanPanHandlers,
   NavigationSceneRenderer,
   NavigationSceneRendererProps,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 type SceneViewProps =  {
   sceneRenderer: NavigationSceneRenderer,
