@@ -13,9 +13,10 @@
 
 import {
   Animated,
-  clamp,
   I18nManager
 } from 'react-native';
+
+const clamp = require('./clamp.js');
 const NavigationAbstractPanResponder = require('./NavigationAbstractPanResponder');
 const NavigationCardStackPanResponder = require('./NavigationCardStackPanResponder');
 
