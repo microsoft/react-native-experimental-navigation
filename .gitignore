@@ -53,4 +53,5 @@ jspm_packages/
 
 # dotenv environment variables file
 .env
-
+# MacOs thumbnails
+.DS_Store
