@@ -267,7 +267,7 @@ declare module 'reactxp-experimental-navigation' {
         enableGestures? : boolean
     };
 
-    class CardStack extends React.Component<NavigationCardStackProps, void> {
+    class CardStack extends React.Component<NavigationCardStackProps, {}> {
 
     }
 
