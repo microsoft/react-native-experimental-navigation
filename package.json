@@ -1,6 +1,6 @@
 {
   "name": "reactxp-experimental-navigation",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "repository": {
     "type": "git",
     "url": "https://github.com/Microsoft/react-native-experimental-navigation"
@@ -15,6 +15,9 @@
     "react-native",
     "navigation"
   ],
+  "dependencies": {
+    "@types/react": "^15.4.1"
+  },
   "author": "Sergei Dryganets",
   "license": "BSD-3-Clause"
 }
