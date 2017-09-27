@@ -37,7 +37,15 @@ const { PropTypes } = require('prop-types');
 import {
   StyleSheet,
   View,
+  ViewPropTypes as NewViewPropTypes,
 } from 'react-native';
+
+var ViewPropTypes;
+if (NewViewPropTypes) {
+  ViewPropTypes = NewViewPropTypes;
+} else {
+  ViewPropTypes = View.propTypes;
+}
 
 const React = require('react');
 
@@ -218,12 +226,12 @@ class NavigationCardStack extends React.PureComponent<DefaultProps, Props, void>
     /**
      * Custom style applied to the cards stack.
      */
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
 
     /**
      * Custom style applied to the scenes stack.
      */
-    scenesStyle: View.propTypes.style,
+    scenesStyle: ViewPropTypes.style,
   };
 
   static defaultProps: DefaultProps = {
