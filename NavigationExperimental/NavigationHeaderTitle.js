@@ -39,9 +39,18 @@ const ReactNative = require('react-native');
 import {
   Platform,
   StyleSheet,
-  View,
   Text,
+  View,
+  ViewPropTypes as NewViewPropTypes,
 } from 'react-native';
+
+var ViewPropTypes;
+
+if (NewViewPropTypes) {
+  ViewPropTypes = NewViewPropTypes;
+} else {
+  ViewPropTypes = View.propTypes;
+}
 
 type Props = {
   children?: React.Element<any>,
@@ -75,7 +84,7 @@ const styles = StyleSheet.create({
 
 NavigationHeaderTitle.propTypes = {
   children: PropTypes.node.isRequired,
-  style: View.propTypes.style,
+  style: ViewPropTypes.style,
   textStyle: Text.propTypes.style
 };
 

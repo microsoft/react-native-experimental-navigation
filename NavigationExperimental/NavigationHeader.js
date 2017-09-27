@@ -38,15 +38,23 @@ const NavigationHeaderTitle = require('./NavigationHeaderTitle');
 const NavigationPropTypes = require('./NavigationPropTypes');
 const { PropTypes } = require('prop-types');
 const React = require('react');
-const ReactNative = require('react-native');
 
-const {
+import {
   Animated,
   Platform,
   StyleSheet,
   TVEventHandler,
   View,
-} = ReactNative;
+  ViewPropTypes as NewViewPropTypes,
+} from 'react-native';
+
+var ViewPropTypes;
+
+if (NewViewPropTypes) {
+  ViewPropTypes = NewViewPropTypes;
+} else {
+  ViewPropTypes = View.propTypes;
+}
 
 import type  {
   NavigationSceneRendererProps,
@@ -115,9 +123,9 @@ class NavigationHeader extends React.PureComponent<DefaultProps, Props, any> {
     renderLeftComponent: PropTypes.func,
     renderRightComponent: PropTypes.func,
     renderTitleComponent: PropTypes.func,
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
     statusBarHeight: PropTypes.number,
-    viewProps: PropTypes.shape(View.propTypes),
+    viewProps: PropTypes.shape(ViewPropTypes),
   };
 
   _tvEventHandler: TVEventHandler;
