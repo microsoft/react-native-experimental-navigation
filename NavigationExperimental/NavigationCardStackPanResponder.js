@@ -112,6 +112,10 @@ class NavigationCardStackPanResponder extends NavigationAbstractPanResponder {
       return false;
     }
 
+    if (!this._isInsideThisView(event)) {
+      return false;
+    }
+
     const layout = props.layout;
     const isVertical = this._isVertical;
     const index = props.navigationState.index;
@@ -208,6 +212,18 @@ class NavigationCardStackPanResponder extends NavigationAbstractPanResponder {
   onPanResponderTerminate(): void {
     this._isResponding = false;
     this._reset();
+  }
+
+  _isInsideThisView(event: any): boolean {
+    const props = this._props;
+    const { pageX, pageY } = event.nativeEvent;
+
+    const isHit = (
+        pageX <= props.layout.width.__getValue() &&
+        pageY <= props.layout.height.__getValue()
+    );
+
+    return isHit;
   }
 
   _reset(): void {
