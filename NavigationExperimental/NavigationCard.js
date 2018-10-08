@@ -78,8 +78,8 @@ class SceneView extends React.Component<any, SceneViewProps, any> {
 
   shouldComponentUpdate(nextProps: SceneViewProps, nextState: any): boolean {
     return (
-      nextProps.sceneRendererProps.scene.route !==
-        this.props.sceneRendererProps.scene.route
+      nextProps.sceneRendererProps.scene !== this.props.sceneRendererProps.scene
+      && nextProps.sceneRendererProps.scene.isActive
     );
   }
 
