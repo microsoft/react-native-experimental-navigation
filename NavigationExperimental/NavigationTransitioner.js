@@ -116,7 +116,7 @@ class NavigationTransitioner extends React.Component<any, Props, State> {
     this._isMounted = false;
   }
 
-  componentWillMount(): void {
+  UNSAFE_componentWillMount(): void {
     this._onLayout = this._onLayout.bind(this);
     this._onTransitionEnd = this._onTransitionEnd.bind(this);
   }
@@ -129,7 +129,7 @@ class NavigationTransitioner extends React.Component<any, Props, State> {
     this._isMounted = false;
   }
 
-  componentWillReceiveProps(nextProps: Props): void {
+  UNSAFE_componentWillReceiveProps(nextProps: Props): void {
     const nextScenes = NavigationScenesReducer(
       this.state.scenes,
       nextProps.navigationState,
